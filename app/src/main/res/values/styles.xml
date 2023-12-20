@@ -6,5 +6,10 @@
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="titleTextColor">?attr/colorOnPrimary</item>
         <item name="titleCentered">true</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleStyle</item>
+    </style>
+
+    <style name="ToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/caesar_dressing</item>
     </style>
 </resources>
