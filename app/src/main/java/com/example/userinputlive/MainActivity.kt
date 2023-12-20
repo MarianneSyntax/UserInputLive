@@ -1,7 +1,6 @@
 package com.example.userinputlive
 
 import android.os.Bundle
-import android.text.Editable
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
@@ -9,6 +8,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import com.example.userinputlive.databinding.ActivityMainBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    private lateinit var constrain: ConstraintLayout
 
     private lateinit var firstRadio: RadioButton
     private lateinit var sndRadio: RadioButton
@@ -50,9 +52,12 @@ class MainActivity : AppCompatActivity() {
 
         // Initialisierung des RadioButtons
         firstRadio = findViewById(R.id.firstRadioBtn)
+        // Initialisierung Constraintlayout
+        var constraintLayout = findViewById<ConstraintLayout>(R.id.constraintLayout)
         // Logik RadioButton
         firstRadio.setOnClickListener {
            Snackbar.make(it,"1. RadioButton geklickt",Snackbar.LENGTH_SHORT).show()
+            constraintLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.pink))
         }
     }
 }
