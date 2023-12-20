@@ -11,6 +11,7 @@
         <item name="colorSecondaryVariant">#FFEB3B</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">#561461</item>
+        <color name="buttonColor">#AFF45E</color>
+
     </style>
 </resources>
