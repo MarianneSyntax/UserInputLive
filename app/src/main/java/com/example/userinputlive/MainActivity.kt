@@ -59,5 +59,15 @@ class MainActivity : AppCompatActivity() {
            Snackbar.make(it,"1. RadioButton geklickt",Snackbar.LENGTH_SHORT).show()
             constraintLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.pink))
         }
+
+        // Initialisierung Reset Button
+        val resetButton = findViewById<Button>(R.id.resetButton)
+        // Logik Reset Button
+        resetButton.setOnClickListener {
+            constraintLayout.setBackgroundColor(ContextCompat.getColor(this,R.color.white))
+            editText.text.clear()
+            outputTextView.text = ""
+        }
+
     }
 }

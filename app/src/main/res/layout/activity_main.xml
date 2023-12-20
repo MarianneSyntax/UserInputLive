@@ -110,5 +110,14 @@
         android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/resetButton"
+        style="@style/CustomButtonStyle"
+        android:layout_marginTop="44dp"
+        android:text="Reset Everything"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
