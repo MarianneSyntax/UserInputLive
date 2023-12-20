@@ -11,7 +11,6 @@
         <item name="colorSecondaryVariant">#FFEB3B</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <color name="buttonColor">#AFF45E</color>
 
     </style>
 </resources>
