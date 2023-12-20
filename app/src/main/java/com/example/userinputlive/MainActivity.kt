@@ -48,7 +48,11 @@ class MainActivity : AppCompatActivity() {
             editText.text.clear()
         }
 
-
+        // Initialisierung des RadioButtons
+        firstRadio = findViewById(R.id.firstRadioBtn)
+        // Logik RadioButton
+        firstRadio.setOnClickListener {
+           Snackbar.make(it,"1. RadioButton geklickt",Snackbar.LENGTH_SHORT).show()
+        }
     }
-
 }
