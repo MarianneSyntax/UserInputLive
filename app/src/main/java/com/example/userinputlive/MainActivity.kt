@@ -24,33 +24,29 @@ class MainActivity : AppCompatActivity() {
     private lateinit var fab: FloatingActionButton
     private lateinit var input: String
     private lateinit var outputTextView: TextView
+    private lateinit var editText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Input aus TextEdit rausschälen
-        var input = findViewById<EditText>(R.id.editText).text
-
+        // Initialisierung des EditText und TextView
+        editText = findViewById(R.id.editText)
+        outputTextView = findViewById(R.id.outputText)
 
         // Logik FAB
         fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
-            Snackbar.make(it, "FAB getappt!",Snackbar.LENGTH_LONG)
-                .show()
+            Snackbar.make(it, "FAB getappt!", Snackbar.LENGTH_LONG).show()
         }
 
         // Logik Button
         button = findViewById(R.id.button)
-        button.setOnClickListener{
-            input.clear()
+        button.setOnClickListener {
+            // Aktualisieren des TextViews mit dem Text aus EditText
+            outputTextView.text = editText.text.toString()
+            editText.text.clear()
         }
-
-        // Logik TextView, die den in TextEdit eingegebenen
-
-
-
-
 
 
     }
