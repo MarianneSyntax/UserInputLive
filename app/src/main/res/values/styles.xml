@@ -3,8 +3,8 @@
         <item name="android:textSize">20dp</item>
         <item name="android:background">?colorPrimary</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:height">?attr/actionBarSize</item>
-        <item name="titleTextColor">@color/white</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="titleTextColor">?attr/colorOnPrimary</item>
         <item name="titleCentered">true</item>
     </style>
 </resources>
