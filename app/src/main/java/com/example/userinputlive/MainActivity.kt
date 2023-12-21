@@ -1,6 +1,7 @@
 package com.example.userinputlive
 
 import android.os.Bundle
+import android.util.TypedValue
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
@@ -15,9 +16,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var constrain: ConstraintLayout
 
     private lateinit var firstRadio: RadioButton
     private lateinit var sndRadio: RadioButton
@@ -56,7 +54,15 @@ class MainActivity : AppCompatActivity() {
         var constraintLayout = findViewById<ConstraintLayout>(R.id.constraintLayout)
         // Logik RadioButton
         firstRadio.setOnClickListener {
-           Snackbar.make(it,"1. RadioButton geklickt",Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(it, "1. RadioButton geklickt", Snackbar.LENGTH_SHORT).show()
+            constraintLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.pink))
+        }
+
+        // Initialisierung des 2. RadioButtons
+        sndRadio = findViewById(R.id.firstRadioBtn)
+        // Logik RadioButton
+        sndRadio.setOnClickListener {
+            Snackbar.make(it, "1. RadioButton geklickt", Snackbar.LENGTH_SHORT).show()
             constraintLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.pink))
         }
 
@@ -64,10 +70,10 @@ class MainActivity : AppCompatActivity() {
         val resetButton = findViewById<Button>(R.id.resetButton)
         // Logik Reset Button
         resetButton.setOnClickListener {
-            constraintLayout.setBackgroundColor(ContextCompat.getColor(this,R.color.white))
+            constraintLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
             editText.text.clear()
             outputTextView.text = ""
+            firstRadio.isChecked = false
         }
-
     }
 }
